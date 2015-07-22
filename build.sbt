@@ -4,7 +4,7 @@ organization := "net.matthewrennie.sbt"
 
 name := "sbt-autoprefixer"
 
-version := "0.1.0-SNAPSHOT"
+version := "0.1.0-IDECIDE"
 
 scalaVersion := "2.10.4"
 
@@ -30,3 +30,7 @@ scriptedSettings
 scriptedBufferLog := false
 
 scriptedLaunchOpts <+= version apply { v => s"-Dproject.version=$v" }
+
+publishMavenStyle := true
+
+publishTo := Some("iDecide Thrid Party" at "https://nexus.flexis.ru/content/repositories/thirdparty")
